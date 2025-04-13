@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  env: {
+    DATABASE_URL: process.env.DATABASE_URL,
+  },
+  // ... other config options
+}
 
-export default nextConfig;
+export default nextConfig
