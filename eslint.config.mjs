@@ -9,8 +9,19 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
+// Your final config
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+
+  // 👇 Add custom override for ignore patterns
+  {
+    ignores: [
+      "node_modules",
+      ".next",
+      "prisma",
+      "lib/generated",
+    ],
+  },
 ];
 
 export default eslintConfig;
