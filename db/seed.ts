@@ -1,5 +1,5 @@
 import sampleData  from '@/db/sample-data';
-import { PrismaClient } from "@/lib/generated/prisma";
+import { PrismaClient } from "@prisma/client";
 
 
 async function main() {
