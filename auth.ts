@@ -23,13 +23,13 @@ export const config = {
     async authorize(credentials){
         if(credentials == null) return null;
 
-        const user = prisma.user.findFirst({
+        const user = await prisma.user.findFirst({
             where:{
                 email:credentials.email as string
             }
         });
 
-        if(user & user.password){
+        if(user && user.password){
             const isMatch = compareSync(credentials.password as string , user.password);
 
             if(isMatch) return {
