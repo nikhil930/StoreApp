@@ -39,7 +39,7 @@ const UserButton = async () => {
             </Button>
           </div>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="w-56" forceMount align="end">
+        <DropdownMenuContent className="w-90" forceMount align="end">
           <DropdownMenuLabel>
             <div className="flex flex-col space-y-1">
               <div className="text-sm font-medium leading-none">
@@ -52,17 +52,17 @@ const UserButton = async () => {
               </div>
             </div>
           </DropdownMenuLabel>
+          <DropdownMenuItem className="p-0 mb-1">
+            <form action={signOutUser} className="w-full">
+              <Button
+                className="w-full py-4 px-2 h-4 justify-start"
+                variant="ghost"
+              >
+                Sign Out
+              </Button>
+            </form>
+          </DropdownMenuItem>
         </DropdownMenuContent>
-        <DropdownMenuItem className="p-0 mb-1">
-          <form action={signOutUser} className="w-full">
-            <Button
-              className="w-full py-4 px-2 h-4 justify-start"
-              variant="ghost"
-            >
-              Sign Out
-            </Button>
-          </form>
-        </DropdownMenuItem>
       </DropdownMenu>
     </div>
   );
